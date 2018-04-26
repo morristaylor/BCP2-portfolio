@@ -1,30 +1,60 @@
 body {
   font-family: sans-serif;
+  background: #d9ede3;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: red;
 }
 
 .hello-block {
-  background: silver;
+  border-bottom: 5px dotted black;
 }
 
-.hello-block ul {
-  display: flex;
+.masthead a {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.masthead p {
+  line-height: .1em;
+  font-size: 1.25em;
+}
+
+.info {
+  font-size: 1.25em;
+  color: black;
   list-style: none;
   padding: 0;
-  margin: 0;
-  justify-content: space-between;
-  flex-direction: column;
 }
 
-.hello-block li {
-  font-size: 1.5em;
+.projects {
+  border-bottom: 5px dotted black;
 }
 
-.full-name {
-  flex: 1;
-  padding: 0;
+.projects h1, h2, h3 {
+  color: black;
 }
 
 .projects li {
   list-style: none;
   line-height: 1rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  margin-top: .5em;
 }
