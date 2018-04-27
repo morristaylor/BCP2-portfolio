@@ -20,7 +20,7 @@ a:hover {
 }
 
 .hello-block,
-.projects {
+.project-wrapper {
   border-bottom: 5px dotted black;
 }
 
@@ -45,11 +45,15 @@ a:hover {
   color: black;
 }
 
-
-.projects li {
-  list-style: none;
-  line-height: .5em;
+.project-wrapper{
+  line-height: 1em;
   padding-bottom: .5em;
+}
+
+
+.project-img {
+  max-width: 100%;
+  padding-top: 1em;
 }
 
 @media screen and (min-width: 450px ) {
