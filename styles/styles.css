@@ -19,6 +19,15 @@ a:hover {
   color: #bfb0b4;
 }
 
+.masthead {
+  line-height: .3em;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+}
+
 .hello-block,
 .projects {
   border-bottom: 5px dotted black;
@@ -30,7 +39,7 @@ a:hover {
 }
 
 .masthead p {
-  line-height: .5em;
+  line-height: .1em;
   font-size: 1.25em;
 }
 
@@ -58,3 +67,9 @@ a:hover {
     max-width: 800px;
     margin: 0 auto;
   }
+
+  .masthead,
+  .info {
+    text-align: left;
+  }
+}
