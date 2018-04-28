@@ -19,6 +19,10 @@ a:hover {
   color: #bfb0b4;
 }
 
+.hello-block {
+  padding-top: 1em;
+}
+
 .masthead {
   line-height: .3em;
   text-align: center;
@@ -53,7 +57,6 @@ a:hover {
   font-size: 1.25em;
   color: black;
 }
-
 
 .projects li {
   list-style: none;
