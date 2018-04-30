@@ -33,7 +33,7 @@ a:hover {
 }
 
 .hello-block,
-.projects {
+#projects {
   border-bottom: 5px dotted black;
 }
 
@@ -58,10 +58,14 @@ a:hover {
   color: black;
 }
 
-.projects li {
+#projects li {
   list-style: none;
   line-height: .5em;
   padding-bottom: .5em;
+}
+
+.template {
+  display: none;
 }
 
 @media screen and (min-width: 450px ) {
