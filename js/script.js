@@ -13,7 +13,9 @@ Project.prototype.toHtml = function() {
   var $newProject = $('div.template').clone();
   $newProject.removeClass('template');
   $newProject.find('h1#title').html(this.title);
-  $newProject.find('h3.project-date').html(this.date)
+  $newProject.find('h3.project-date').html(this.date);
+  $newProject.find('p.body').html(this.body);
+// need to work on getting images into the body and replicating this general behavior on project.html
   return $newProject;
 };
 
