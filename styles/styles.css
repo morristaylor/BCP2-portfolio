@@ -34,7 +34,7 @@ a:hover {
 }
 
 .hello-block,
-#projects, {
+#projects {
   border-bottom: 5px dotted black;
 }
 
