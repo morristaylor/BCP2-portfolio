@@ -1,10 +1,11 @@
 'use strict';
 var projectView = {};
 
+// if h2 target === project title, show that project title
 projectView.handleClicks = function() {
   $('.project-list').on('click', 'h2', function(event) {
-    if (event.target.firstChild === $('#title'));
-    $('#projects').fadeIn(750);
+    if (event.target.firstChild === $('#projects'));
+    $('#projects').fadeIn(500);
   });
 };
 
