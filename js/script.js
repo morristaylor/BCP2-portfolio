@@ -1,20 +1,38 @@
-// ... as a developer, I want to make a data model (object constructor) for my portfolio data, so I can store individual projects and render them to the DOM.
-// basics, roughly: json datastore -> new Project constructor -> jquery element selector from new Project
-// ???
+'use strict';
+var projects = [];
 
-"use strict";
-function Project(title, date, overview, imgs) {
-  this.title = title;
-  this.date = date;
-  this.overview = overview;
-  this.imgs = imgs;
+function Project (rawProjectObj) {
+  var keys = Object.keys(rawProjectObj);
+  for (var index = 0; index < keys.length; index++) {
+    var key = keys[index];
+    var value = rawProjectObj[key];
+    this[key] = value;
+  }
 }
 
-// basic functionality //
-var projects = [];
-projects.push(new Project("Lab 01 Portfolio", "April 28, 2018", "First assignment", "img.jpg"));
+Project.prototype.toHtml = function() {
+  var $newProject = $('div.template').clone();
+  $newProject.removeClass('template');
+  $newProject.attr('id', this.id);
+  $newProject.find('h1.title').html(this.title);
+  $newProject.find('h3.project-date').html(this.date);
+  $newProject.find('h4.overview').html(this.overview);
+  $newProject.find('p.body').html(this.body);
+  return $newProject;
+};
 
-// long is main description for project page
-// overview is short description for index page
-// main needs to be main image
-// addl needs to be additional images, as an array probably
+  rawProject.forEach(function(projectObject) {
+    // REVIEW: Take a look at this forEach method; This may be the first time we've seen it.
+    projects.push(new Project(projectObject));
+  });
+
+  projects.forEach(function(project) {
+    $('#projects').append(project.toHtml());
+  });
+
+function renderMenu() {
+  var projectList = document.getElementById('project-list');
+  for (var index = 0; index < projects.length; index++) {
+    projectList.innerHTML += `<h2><a href="#" data-project-id="${projects[index].id}">${projects[index].title}</a></h2>`;
+  }
+}

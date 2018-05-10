@@ -1,1 +1,1 @@
-# lab-01-portfolio
+# bcp2 portfolio project
