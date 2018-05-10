@@ -2,15 +2,18 @@
 var projects = [];
 
 function Project (rawProjectObj) {
-  this.title = rawProjectObj.title;
-  this.date = rawProjectObj.date;
-  this.overview = rawProjectObj.overview;
-  this.body = rawProjectObj.body;
+  var keys = Object.keys(rawProjectObj);
+  for (var index = 0; index < keys.length; index++) {
+    var key = keys[index];
+    var value = rawProjectObj[key];
+    this[key] = value;
+  }
 }
 
 Project.prototype.toHtml = function() {
   var $newProject = $('div.template').clone();
   $newProject.removeClass('template');
+  $newProject.attr('id', this.id);
   $newProject.find('h1.title').html(this.title);
   $newProject.find('h3.project-date').html(this.date);
   $newProject.find('h4.overview').html(this.overview);
@@ -27,7 +30,9 @@ Project.prototype.toHtml = function() {
     $('#projects').append(project.toHtml());
   });
 
-// projects.push(new Project("Lab 01 Portfolio", "April 28, 2018", "First assignment", "img.jpg"));
-// ... as a developer, I want to make a data model (object constructor) for my portfolio data, so I can store individual projects and render them to the DOM.
-// basics, roughly: json datastore -> new Project constructor -> jquery element selector from new Project
-// ???
+function renderMenu() {
+  var projectList = document.getElementById('project-list');
+  for (var index = 0; index < projects.length; index++) {
+    projectList.innerHTML += `<h2><a href="#" data-project-id="${projects[index].id}">${projects[index].title}</a></h2>`;
+  }
+}
