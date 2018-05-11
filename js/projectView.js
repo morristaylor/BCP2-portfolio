@@ -3,14 +3,13 @@ var projectView = {};
 
 projectView.handleClicks = function() {
   $('#project-list').on('click', 'a', function(event) {
-    $('.project').hide();
-    var projectId = this.dataset.projectId;
-    $(`#${projectId}`).fadeIn(750);
+    $('#projects').children().hide();
+    $(`.${event.target.id}`).fadeIn(500);
   });
 };
 
 $(document).ready(function() {
-  $('.project').hide();
+  $('#projects').children().hide();;
   projectView.handleClicks();
   renderMenu();
-})
+});
