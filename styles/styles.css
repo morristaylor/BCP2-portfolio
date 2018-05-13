@@ -60,16 +60,6 @@ a:hover {
   color: black;
 }
 
-#projects li {
-  list-style: none;
-  line-height: .5em;
-  padding-bottom: .5em;
-}
-
-.template {
-  display: none;
-}
-
 #projects p {
   color: #3d3d3d;
   line-height: 1.3;
@@ -78,6 +68,13 @@ a:hover {
 #project-list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#project-list a {
+  margin: 1em;
+  padding: .25em;
+  text-shadow: 2px 2px #eddbd9;
 }
 
 img {
@@ -89,14 +86,17 @@ h4 {
 }
 
 @media screen and (min-width: 450px ) {
+ body {
+   font-size: 1.2em;
+ }
 
-  .wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
 
-  .masthead,
-  .info {
-    text-align: left;
+.masthead,
+.info {
+  text-align: left;
   }
 }
