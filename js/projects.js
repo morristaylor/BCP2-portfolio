@@ -20,5 +20,12 @@ var rawProject = [
   date:        '2016-01-01',
   overview:    'Sample Project #3 for my portfolio website',
   body:        '<img src="https://placeimg.com/700/400/tech/sepia"></a><br>Cras bibendum, felis quis suscipit tristique, odio erat aliquet ante, eget mattis nibh neque nec nibh. Phasellus aliquet dui dolor, id vehicula erat condimentum ac. Cras laoreet a enim ac sodales. Fusce condimentum tristique sollicitudin. Pellentesque tellus turpis, posuere quis tincidunt vel, porttitor nec lorem.<p>Jerky lorem consectetur tempor consequat pig magna incididunt filet mignon ullamco elit ea ut frankfurter. Andouille salami pig capicola. Short ribs cupim sirloin, in shank non landjaeger tri-tip. '
+},
+{
+  id:          'project-4',
+  title:       'Project #4',
+  date:        '2015-01-01',
+  overview:    'Sample Project #3 for my portfolio website',
+  body:        '<img src="https://placeimg.com/700/400/tech/sepia"></a><br>Cras bibendum, felis quis suscipit tristique, odio erat aliquet ante, eget mattis nibh neque nec nibh. Phasellus aliquet dui dolor, id vehicula erat condimentum ac. Cras laoreet a enim ac sodales. Fusce condimentum tristique sollicitudin. Pellentesque tellus turpis, posuere quis tincidunt vel, porttitor nec lorem.<p>Jerky lorem consectetur tempor consequat pig magna incididunt filet mignon ullamco elit ea ut frankfurter. Andouille salami pig capicola. Short ribs cupim sirloin, in shank non landjaeger tri-tip. '
 }
 ];
