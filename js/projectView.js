@@ -8,8 +8,12 @@ projectView.handleClicks = function() {
   });
 };
 
-$(document).ready(function() {
-  $('#projects').children().hide();;
-  projectView.handleClicks();
-  renderMenu();
-});
+projectView.initIndex = function() {
+  projects.forEach(function(project) {
+    $('#projects').append(project.toHtml());
+  });
+
+    $('#projects').children().hide();
+    projectView.handleClicks();
+    renderMenu();
+};
