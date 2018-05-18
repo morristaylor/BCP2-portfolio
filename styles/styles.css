@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   background: #d9ede3;
+  font-size: 1.2em;
   padding: 1em;
 }
 
@@ -85,10 +86,11 @@ h4 {
   line-height: 1em;
 }
 
+/* footer {
+  text-align: center;
+} */
+
 @media screen and (min-width: 450px ) {
- body {
-   font-size: 1.2em;
- }
 
 .wrapper {
   max-width: 850px;
