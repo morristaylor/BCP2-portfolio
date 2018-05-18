@@ -11,14 +11,6 @@ function Project (rawProjectObj) {
 }
 
 Project.prototype.toHtml = function() {
-  // var $newProject = $('div.template').clone();
-  // $newProject.removeClass('template');
-  // $newProject.attr('id', this.id);
-  // "$newProject.find('h1.title').html"(this.title);
-  // $newProject.find('h3.project-date').html(this.date);
-  // $newProject.find('h4.overview').html(this.overview);
-  // $newProject.find('p.body').html(this.body);
-  // return $newProject;
   var theTemplateScript = $("#projects-template").html();
   var theTemplate = Handlebars.compile(theTemplateScript);
   var context = {
