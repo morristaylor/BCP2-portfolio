@@ -24,13 +24,28 @@ Project.prototype.toHtml = function() {
   return $newProject;
 };
 
-rawProject.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
-});
+Project.loadAll = function(rawProject) {
+  rawProject.forEach(function(projectObject) {
+    projects.push(new Project(projectObject));
+  });
+}
 
-projects.forEach(function(project) {
-  $('#projects').append(project.toHtml());
-});
+Project.fetchAll = function() {
+ if (sessionStorage.rawProject) {
+   Project.loadAll(JSON.parse(sessionStorage.rawProject));
+   projectView.initIndex();
+ }
+ else {
+    $.getJSON('../data/projects.json')
+    .then(function(rawProject) {
+      sessionStorage.rawProject = JSON.stringify(rawProject);
+      Project.loadAll(rawProject);
+      projectView.initIndex();
+    });
+  }
+}
+
+Project.fetchAll();
 
 function renderMenu() {
   var projectList = document.getElementById('project-list');
