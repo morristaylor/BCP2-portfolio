@@ -86,11 +86,7 @@ h4 {
   line-height: 1em;
 }
 
-/* footer {
-  text-align: center;
-} */
-
-@media screen and (min-width: 450px ) {
+@media screen and (min-width: 450px) {
 
 .wrapper {
   max-width: 850px;
