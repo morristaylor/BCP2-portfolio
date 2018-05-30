@@ -17,9 +17,3 @@ projectView.initIndex = function() {
     projectView.handleClicks();
     renderMenu();
 };
-
-
-//routes
-//(/, projectView.initIndex)
-
-    
