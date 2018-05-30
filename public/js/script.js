@@ -50,6 +50,6 @@ Project.fetchAll();
 function renderMenu() {
   var projectList = document.getElementById('project-list');
   for (var i = 0; i < projects.length; i++) {
-    projectList.innerHTML += `<h2><a href="#" id="${projects[i].id}">${projects[i].title}</a></h2>`;
+    projectList.innerHTML += `<h2><a href="/projects/${projects[i].id}" id="${projects[i].id}">${projects[i].title}</a></h2>`;
   }
 }
