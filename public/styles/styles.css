@@ -10,12 +10,12 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: calc(93vh - 25px);
 }
 
 a {
   text-decoration: none;
   color: #444;
+  cursor: crosshair;
 }
 
 a:visited {
@@ -25,14 +25,14 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #E198B2;
+  color: #FF8DA3;
 }
 
 .hello-block {
   text-align: center;
   padding: .25em 1em;
   border-radius: .5em;
-  box-shadow: 75px 10px 7px 0px #D1ABC5;
+  box-shadow: 75px 10px 7px 0px #99FC99;
 }
 
 .masthead {
@@ -75,14 +75,14 @@ a:hover {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  box-shadow: -50px 10px 7px 0px #D1ABC5;
+  box-shadow: -50px 10px 7px 0px #FF8DA3;
   border-radius: .5em;
   margin: 1em 0;
 }
 
 .get-border {
   max-width: 850px;
-  box-shadow: 60px 10px 7px 0px #D1ABC5;
+  box-shadow: 60px 10px 7px 0px #3279AD;
   border-radius: .5em;
   padding: .5em;
 }
@@ -90,7 +90,6 @@ a:hover {
 #project-list a {
   margin: 1em;
   padding: .25em;
-  text-shadow: 2px 2px #EEC3D2;
 }
 
 img {
@@ -105,7 +104,7 @@ h4 {
 @media screen and (min-width: 750px) {
 
 .wrapper {
-  max-width: 850px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
