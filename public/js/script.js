@@ -33,23 +33,13 @@ Project.loadAll = function(rawProject) {
 Project.fetchAll = function() {
  if (sessionStorage.rawProject) {
    Project.loadAll(JSON.parse(sessionStorage.rawProject));
-   projectView.initIndex();
  }
  else {
-    $.getJSON('../data/projects.json')
-    .then(function(rawProject) {
-      sessionStorage.rawProject = JSON.stringify(rawProject);
+    $.get('../data/projects.json', function(rawProject) {
       Project.loadAll(rawProject);
-      projectView.initIndex();
-    });
+      projectView.init();
+      sessionStorage.rawProject = JSON.stringify(rawProject);
+    })
   }
 }
-
 Project.fetchAll();
-
-function renderMenu() {
-  var projectList = document.getElementById('project-list');
-  for (var i = 0; i < projects.length; i++) {
-    projectList.innerHTML += `<h2><a href="/projects/${projects[i].id}" id="${projects[i].id}">${projects[i].title}</a></h2>`;
-  }
-}
