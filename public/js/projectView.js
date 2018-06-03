@@ -11,7 +11,7 @@ projectView.renderMenu = function() {
 projectView.handleClicks = function() {
   $('#project-list').on('click', 'a', function(event) {
     $('#projects').children().hide();
-    $(`.${event.target.id}`).fadeIn(250);
+    $(`.${event.target.id}`).show();
   });
 };
 

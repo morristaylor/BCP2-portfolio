@@ -1,18 +1,19 @@
 body {
   font-family: sans-serif;
-  background: #d9ede3;
+  color: #444;
+  background: white;
   font-size: 1.2em;
   padding: 1em;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #444;
 }
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: #444;
 }
 
 a:hover {
@@ -21,7 +22,10 @@ a:hover {
 }
 
 .hello-block {
-  padding-top: 1em;
+  text-align: center;
+  padding: 1em 1em .25em 1em;
+  border-radius: .5em;
+  box-shadow: 0px 0px 7px 0px #D1ABC5;
 }
 
 .masthead {
@@ -32,12 +36,6 @@ a:hover {
 .info,
 .projects-h1 {
   text-align: center;
-}
-
-.hello-block,
-#project-list,
-.get-bord {
-  border-bottom: 5px dotted black;
 }
 
 .masthead a {
@@ -70,6 +68,15 @@ a:hover {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  box-shadow: 0px 0px 7px 0px #D1ABC5;
+  border-radius: .5em;
+  margin: 1em 0;
+}
+
+.get-border {
+  box-shadow: 0px 0px 7px 0px #D1ABC5;
+  border-radius: .5em;
+  padding: .5em;
 }
 
 #project-list a {
