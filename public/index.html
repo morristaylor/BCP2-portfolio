@@ -7,8 +7,9 @@
    <title>Portfolio Project</title>
    <link rel="stylesheet" href="styles/normalize.css" type="text/css">
    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Prata" rel="stylesheet">
    <script id="projects-template" type="text/x-handlebars-template">
-     <div class="{{id}} get-bord">
+     <div class="{{id}} get-border">
      <h1>{{title}}</h1>
      <h3>{{date}}</h3>
      <h4>{{overview}}</h4>
@@ -31,16 +32,15 @@
     </nav>
     <nav id="project-list"></nav>
     <div id="projects"></div>
-    <footer><p>2018 | Portland, Oregon | A future footer...</p></footer>
     </div>
-
     <script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script type="text/javascript" src="js/projectView.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-
+    <script type="text/javascript" src="js/projectView.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
  </body>
 </html>
